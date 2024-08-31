@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="center"><button id="show-form">Форма</button></div>
+    <div class="popup active">
+      <form id="form" novalidate>
+        <div class="close-btn">&times</div>
+        <h2>Транспортные средства и водители</h2>
+        <div class="form-element">
+          <label for="state number">Гос-номер</label>
+          <input
+            type="text"
+            id="state number"
+            placeholder="Укажите гос-номер"
+            class="js-input"
+            onkeyup="changeValue(this)"
+            onblur="checkValidation(this)"
+          />
+        </div>
+        <div class="form-element">
+          <label for="transport">Транспортное средство</label>
+          <input
+            type="text"
+            id="transport"
+            placeholder="Транспортное средство"
+            class="js-input"
+            onkeyup="changeValue(this)"
+            onblur="checkValidation(this)"
+          />
+        </div>
+        <div class="form-element">
+          <label for="date">Ориентировочная дата прибытия к покупателю</label>
+          <input
+            type="date"
+            id="date"
+            placeholder="Дата"
+            class="js-input"
+            onkeyup="changeValue(this)"
+            onblur="checkValidation(this)"
+            required
+          />
+        </div>
+        <h2>Данные о водителе</h2>
+        <div class="form-element">
+          <label for="name">ФИО</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Укажите ФИО водителя"
+            class="js-input"
+            onkeyup="changeValue(this)"
+            onblur="checkValidation(this)"
+          />
+        </div>
+        <div class="form-element">
+          <label for="passport-series">Паспортные данные</label>
+          <div>
+            <input
+              type="number"
+              id="passport-series"
+              placeholder="Серия"
+              class="passport js-input"
+              onkeyup="changeValue(this)"
+              onblur="checkValidation(this)"
+            />
+            <input
+              type="number"
+              id="passport-number"
+              placeholder="Номер"
+              class="passport js-input"
+              onkeyup="changeValue(this)"
+              onblur="checkValidation(this)"
+            />
+          </div>
+        </div>
+        <div class="form-element">
+          <label for="issued by whom">Кем выдан</label>
+          <input
+            type="text"
+            id="issued by whom"
+            placeholder="Кем выдан"
+            class="js-input"
+            onkeyup="changeValue(this)"
+            onblur="checkValidation(this)"
+          />
+        </div>
+        <div class="form-element">
+          <label for="date of issue">Когда выдан</label>
+          <input
+            type="date"
+            id="date of issue"
+            placeholder="Когда выдан"
+            class="js-input"
+            onkeyup="changeValue(this)"
+            onblur="checkValidation(this)"
+            required
+          />
+        </div>
+        <div class="form-element">
+          <button type="submit" class="button-send inline">Отправить</button>
+          <button type="button" class="button-cancel inline">Отменить</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
